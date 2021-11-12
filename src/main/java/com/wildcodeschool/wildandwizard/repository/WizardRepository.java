@@ -13,8 +13,10 @@ import java.util.List;
 @Repository
 public class WizardRepository implements WizardDao {
 
-    @Autowired
-    @Qualifier("wizard")
+    // Qualifier braucht es hier nicht, weil es nur ein Repository gibt,
+    // und Autowired braucht's sowieso nicht, weil @Repository schon die "Verbindung herstellt"
+    // @Autowired
+    // @Qualifier("wizard")
 
     private static List<Wizard> wizards = new ArrayList<>(
             Arrays.asList(
